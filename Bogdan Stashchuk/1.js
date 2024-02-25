@@ -1,25 +1,39 @@
 document.addEventListener("DOMContentLoaded", function () {
     const users = {
-        Saverzus: {
+        id_1: {
             name: 'Bogdan',
-            surname: 'Trofimenko',
+            city: 'Rostov',
+            info: {
+                isPopular: true,
+                country: 'Russia'
+            },
             age: 28
         },
-        Zendro: {
-            name: 'Daniil',
-            surname: 'Serov',
-            age: 25
-        },
-        ArtemDj: {
+        id_2: {
             name: 'Artem',
-            surname: 'Kurbatov',
+            city: 'Rostov',
+            info: {
+                isPopular: true,
+                country: 'Russia'
+            },
             age: 27
+        },
+        id_3: {
+            name: 'Alex',
+            city: 'Stambul',
+            info: {
+                isPopular: true,
+                country: 'Turkey'
+            },
+            age: 26
         }
     };
 
-    for (let user in users) {
-        users[user].age++;
+    function getUsersNames(users) {
+        for (let key in users) {
+            users[key].age *= 2;
+            console.log(users[key]);
+        }
     }
-
-    console.log(users);
+    getUsersNames(users);
 });
