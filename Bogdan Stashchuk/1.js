@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 isPopular: true,
                 country: 'Russia'
             },
-            age: 27
+            age: 17
         },
         id_3: {
             name: 'Alex',
@@ -30,10 +30,15 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     function getUsersNames(users) {
+        const filteredUsers = {};
+
         for (let key in users) {
-            users[key].age *= 2;
-            console.log(users[key]);
+            if (users[key].age > 18) {
+                filteredUsers[key] = users[key];
+                console.log(filteredUsers[key]);
+            }
         }
     }
+
     getUsersNames(users);
 });
