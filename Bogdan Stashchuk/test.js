@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const person = {
+    const personOne = {
         age: 28,
         name: 'Bogdan'
     }
@@ -10,6 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return person;
     }
 
-    console.log(person);
-    console.log(increseAte(person));
+    console.log(personOne);
+    console.log(increseAte(personOne));
 })
