@@ -1,15 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const personOne = {
-        age: 28,
-        name: 'Bogdan'
+    const person = {
+        name: 'Bogdan',
+        age: 28
     }
 
-    function increseAte(person) {
-        person.age = person.age + 1;
-        return person;
+    function renameUser(personName) {
+        const newPerson = Object.assign({}, person);
+        newPerson.name = 'Daniel';
+        return newPerson;
     }
 
-    console.log(personOne);
-    console.log(increseAte(personOne));
+    const updatePeron = renameUser(person);
+    console.log(person);
+
+    console.log(updatePeron);
 })
