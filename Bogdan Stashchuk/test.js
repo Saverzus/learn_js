@@ -2,13 +2,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    function printName() {
-        console.log('BoTr');
+    const button = {
+        name: "Скачать",
+        size: 20 + 'mb',
     }
 
-    setTimeout(printName, 3000);
+    const newButton = {
+        ...button,
+        date: 'Вчера',
+    }
 
-
+    console.log(button);
+    console.log(newButton);
 
 
 
