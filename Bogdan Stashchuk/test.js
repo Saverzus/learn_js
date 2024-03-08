@@ -1,23 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
 
 
-
-    const buttonInfo = {
-        name: 'Ссылка'
+    const ooquFunction = function (a, b) {
+        let c;
+        a = a + 1;
+        c = a + b;
+        return c;
     }
 
-    const buttonSize = {
-        width: 300 + 'px',
-        height: 150 + 'px'
-    }
+    console.log(ooquFunction(5, 3));
 
-
-    const button = {
-        ...buttonInfo,
-        ...buttonSize
-    }
-
-    console.table(button);
 
 
 })
