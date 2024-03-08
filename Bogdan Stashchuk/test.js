@@ -2,20 +2,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+    const buttonInfo = {
+        name: 'Ссылка'
+    }
+
+    const buttonSize = {
+        width: 300 + 'px',
+        height: 150 + 'px'
+    }
+
+
     const button = {
-        name: "Скачать",
-        size: 20 + 'mb',
+        ...buttonInfo,
+        ...buttonSize
     }
 
-    const newButton = {
-        ...button,
-        date: 'Вчера',
-    }
-
-    console.log(button);
-    console.log(newButton);
-
-
+    console.table(button);
 
 
 })
