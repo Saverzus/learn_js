@@ -1,15 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
 
 
-    const newPost = (post, addedAt = Date()) => ({
-        ...post,
-        addedAt,
-    })
-
-    const firstPost = {
-        id: 1,
-        author: 'Bogdan'
+    const user = {
+        name: 'Bogdan',
+        age: 17
     }
 
-    console.log(newPost(firstPost));
+    const fnWidthError = (user) => {
+        if (user.age < 18) {
+            throw new Error("Пользователю меньше 18 лет");
+        } else {
+            throw new Error("Пользователю больше 18 лет");
+        }
+    }
+
+    fnWidthError(user);
+
+
+
+
+
+
 })
