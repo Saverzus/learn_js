@@ -1,22 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
 
 
-    const fnWithError = () => {
-        throw new Error('Ошибка');
-    }
+    const myArray = [333, 22, 33, 123, 5, 6, 7, 8];
+    myArray.sort((a, b) => a - b);
 
-    try {
-        fnWithError();
-    } catch (error) {
-        console.error(error)
-        console.log(error.message)
-    }
-
-    console.log('Продолжить код');
-
-
-
-
-
+    console.log(myArray);
 
 })
