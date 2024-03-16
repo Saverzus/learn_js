@@ -43,4 +43,17 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(myArrayMultipled);
     }
 
+    // 6 Умножить элементы массива в X раз (МЕТОД МАССИВА map)
+    function modifyPrice(a) {
+        const priceArray = [200, 100, 300, 1200];
+
+        const newPriceArray = priceArray.map(e => {
+            return e * a;
+        });
+
+        return newPriceArray;
+    }
+
+
+
 })
