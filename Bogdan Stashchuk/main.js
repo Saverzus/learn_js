@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(myArrayMultipled);
     }
 
-    // 6 Умножить элементы массива в X раз (МЕТОД МАССИВА map)
+    // 6 Умножить элементы массива в X раз (МЕТОД МАССИВА map) (создаёт новый массив)
     function modifyPrice(a) {
         const priceArray = [200, 100, 300, 1200];
 
@@ -54,6 +54,20 @@ document.addEventListener("DOMContentLoaded", function () {
         return newPriceArray;
     }
 
+    // 7 Деструктуризация (Саша обучал вспомнить)
+    function destructuring() {
+        const userProfile = {
+            name: 'Bogdan',
+            age: 28,
+            city: 'Rostov'
+        }
 
+        const { name, age } = userProfile;
+        const { city } = userProfile;
+
+        console.log(name);
+        console.log(city);
+    }
+    destructuring();
 
 })
