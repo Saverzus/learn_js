@@ -8,11 +8,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // 2 Добавить в начало массива
-    function unshifting(a) {
+    function unshiftArray(a) {
         const myArray = [1, 2, 3];
         myArray.unshift(a);
         console.log(myArray);
         return myArray;
+    }
+
+    // 3 Удалить первый элементм в начало массива
+    function shiftArray() {
+        const myArray = [1, 2, 3];
+        myArray.shift();
+        console.log(myArray);
     }
 
 })
