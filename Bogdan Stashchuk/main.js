@@ -15,11 +15,33 @@ document.addEventListener("DOMContentLoaded", function () {
         return myArray;
     }
 
-    // 3 Удалить первый элементм в начало массива
+    // 3 Добавить в конец массива
+    function pushArray(a) {
+        const myArray = [1, 2, 3];
+        myArray.push(a);
+        console.log(myArray);
+        return myArray;
+    }
+
+    // 4 Удалить первый элементм в начале массива
     function shiftArray() {
         const myArray = [1, 2, 3];
         myArray.shift();
         console.log(myArray);
     }
+
+    // 5 Умножить элементы массива в X раз
+    function miltuplyArray(a) {
+        const myArray = [1, 2, 3, 4, 5];
+        const myArrayMultipled = [];
+
+        myArray.forEach(el => {
+            myArrayMultipled.push(el * a);
+        });
+
+        console.log(myArray);
+        console.log(myArrayMultipled);
+    }
+
 
 })
