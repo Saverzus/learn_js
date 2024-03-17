@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return newPriceArray;
     }
 
-    // 7.0 Деструктуризация объекта (Саша обучал вспомнить)
+    // 7.0 Деструктуризация объекта
     function destructuringObj() {
         const userProfile = {
             name: 'Bogdan',
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(name);
         console.log(city);
     }
-    // 7.1 Деструктуризация массива (Саша обучал вспомнить)
+    // 7.1 Деструктуризация массива
     function destructuringArray() {
         const fruits = ['Apple', 'Banana'];
         const [fruitOne, fruitTwo] = fruits;
@@ -76,6 +76,31 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(fruitOne);
         console.log(fruitTwo);
     }
+
+    // 8. Деструктуризация в функциях (Получить количество постов пользователя)
+    function getUserPosts() {
+        const userProfile = {
+            id: 1,
+            name: 'Bogdan',
+            age: 28,
+            postsQuantity: 10
+        };
+
+        const userPostInfo = (name, postsQuantity) => {
+            if (!postsQuantity) {
+                return `User ${name} has no posts`;
+            }
+            return `User ${name} has ${postsQuantity} posts`;
+        }
+
+        return userPostInfo(userProfile.name, userProfile.postsQuantity);
+    }
+
+
+
+
+
+
 
 
 })
