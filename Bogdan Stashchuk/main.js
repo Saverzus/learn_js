@@ -83,18 +83,21 @@ document.addEventListener("DOMContentLoaded", function () {
             id: 1,
             name: 'Bogdan',
             age: 28,
-            postsQuantity: 10
+            postsQuantity: 20
         };
 
-        const userPostInfo = (name, postsQuantity) => {
+        const userPostInfo = ({ name, postsQuantity }) => {
             if (!postsQuantity) {
                 return `User ${name} has no posts`;
             }
             return `User ${name} has ${postsQuantity} posts`;
         }
 
-        return userPostInfo(userProfile.name, userProfile.postsQuantity);
+        return userPostInfo(userProfile);
     }
+
+    console.log(getUserPosts());
+
 
 
 
