@@ -96,14 +96,15 @@ document.addEventListener("DOMContentLoaded", function () {
         return userPostInfo(userProfile);
     }
 
-    console.log(getUserPosts());
+    // 9. Только положительные числа и только числа (Условия)
+    const sumPositiveNumbers = (a, b) => {
+        if (typeof a !== 'number' || typeof b !== 'number') {
+            return 'Thats numbers is not valid (maybe u use a text or sumeting else';
+        }
+        if (a <= 0 || b <= 0) {
+            return 'Thats numbers is not positive';
+        }
 
-
-
-
-
-
-
-
-
+        return a + b;
+    }
 })
