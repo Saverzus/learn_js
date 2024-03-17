@@ -54,8 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
         return newPriceArray;
     }
 
-    // 7 Деструктуризация (Саша обучал вспомнить)
-    function destructuring() {
+    // 7.0 Деструктуризация объекта (Саша обучал вспомнить)
+    function destructuringObj() {
         const userProfile = {
             name: 'Bogdan',
             age: 28,
@@ -68,6 +68,14 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(name);
         console.log(city);
     }
-    destructuring();
+    // 7.1 Деструктуризация массива (Саша обучал вспомнить)
+    function destructuringArray() {
+        const fruits = ['Apple', 'Banana'];
+        const [fruitOne, fruitTwo] = fruits;
+
+        console.log(fruitOne);
+        console.log(fruitTwo);
+    }
+
 
 })
