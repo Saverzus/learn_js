@@ -107,4 +107,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
         return a + b;
     }
+
+    // 10. Является ли текущий месяц зимним (switch)
+    const checkWinterMonth = (month) => {
+        switch (month) {
+            case 12:
+                console.log('December');
+                break;
+            case 1:
+                console.log('January');
+                break;
+            case 2:
+                console.log('February');
+                break;
+            default:
+                console.log('Thats not a winter month');
+        }
+    }
+
+
+
 })
