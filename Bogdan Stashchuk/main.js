@@ -125,6 +125,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // 11. Проверка на совершенолетие (тернарный оператор)
+    const checkAge = (year) => {
+        year >= 18 ? console.log('Liquid age') : console.log('Not liquid age');
+        return year;
+    }
+
 
 
 })
