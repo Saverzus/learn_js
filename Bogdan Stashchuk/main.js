@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return year;
     }
 
-    // 12.
+    // 12. Пройтись циклом forEach по массиву
     function arrayForEach() {
         const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -139,7 +139,21 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log(element, id);
         })
     }
-    arrayForEach();
+
+    // 13. Пройтись циклом по объекту и получить свойства и значения объекта (key in obj)
+    function keysFromObject() {
+        users = {
+            id: 1,
+            name: 'Bogdan',
+            age: 28
+        }
+
+        for (const key in users) {
+            console.log(key, users[key]);
+        }
+    }
+
+    keysFromObject();
 
 
 })
