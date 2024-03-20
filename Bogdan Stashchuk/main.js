@@ -153,7 +153,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    keysFromObject();
+    // 14. Пройтись циклом по объекту через forEach
+    function forEachObject() {
+        users = {
+            id: 1,
+            name: 'Bogdan',
+            age: 28
+        }
 
+        Object.keys(users).forEach(key => {
+            console.log(key, users[key])
+        })
+    }
+
+    forEachObject()
 
 })
