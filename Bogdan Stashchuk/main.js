@@ -222,8 +222,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    forOfExample();
-
 
 
 
