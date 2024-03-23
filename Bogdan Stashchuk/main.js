@@ -200,6 +200,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
+    // 17. for in пример (пройтись циклом по массиву)
+    function forInExample() {
+        const myArray = [true, 10, 'abc', null];
+
+        for (const key in myArray) {
+            console.log(myArray[key]);
+        }
+    }
 
 
 
