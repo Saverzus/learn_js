@@ -199,8 +199,7 @@ document.addEventListener("DOMContentLoaded", function () {
         readBook();
     }
 
-
-    // 17. for in пример (пройтись циклом по массиву)
+    // 17. for in пример (пройтись циклом по массиву) (так лучше не делать и лучше через forEach делать)
     function forInExample() {
         const myArray = [true, 10, 'abc', null];
 
@@ -209,6 +208,21 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // 18. for of пример (то есть через of можно перебирать любое значение (символы строки например, или элементы массива)) (так-же лучше через foEach делать) (так-же for of не для объектов)
+    function forOfExample() {
+        const name = 'Bogdan';
+        const array = [1, 2, 3, 4, 5];
+
+        for (const letter of name) {
+            console.log(letter);
+        }
+
+        for (const element of array) {
+            console.log(element);
+        }
+    }
+
+    forOfExample();
 
 
 
