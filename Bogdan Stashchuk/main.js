@@ -166,12 +166,22 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 
+    // 15. Получить значения из объекта (keys или values) через forEach вызывать так getValuesOrKeysFromObject('keys'); или так getValuesOrKeysFromObject('values');
+    function getValuesOrKeysFromObject(action) {
+        const obj = {
+            id: 1,
+            name: 'Bogdan',
+            age: '28'
+        };
 
-    let array = ['e', 'f', 'g', 'h', 'i'];
+        function keysOrValues(arg, obj) {
+            return arg === 'keys' ? Object.keys(obj) : Object.values(obj);
+        }
 
-    array.forEach((e) => {
-        console.log(e + e);
-    })
+        console.log(keysOrValues(action, obj));
+    }
+
+
 
 
 })
