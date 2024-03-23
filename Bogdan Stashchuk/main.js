@@ -181,6 +181,28 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(keysOrValues(action, obj));
     }
 
+    // 16. Пример с callBack функцией (она должна быть выполнена после завершения работы другой функции.)
+    function callBackExample() {
+        const makePizza = function (title, callBackFunction) {
+            console.log(`${title} готовится`);
+            setTimeout(callBackFunction, 5000);
+        }
+
+        const readBook = () => {
+            console.log('Читаю книгу');
+        }
+
+        const eatPizza = function () {
+            console.log('Кушац');
+        }
+        makePizza('4 сыра пицца', eatPizza);
+        readBook();
+    }
+
+
+
+
+
 
 
 
