@@ -166,6 +166,12 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 
-    forEachObject()
+
+    let array = ['e', 'f', 'g', 'h', 'i'];
+
+    array.forEach((e) => {
+        console.log(e + e);
+    })
+
 
 })
