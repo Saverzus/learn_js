@@ -222,8 +222,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // 19. Импортирование
+    // Например есть файл moduleOne.js
+    // const one = 1;
+    // const two = 'two';
+
+    // export {
+    //     one,
+    //     two
+    // }
+
+    // // И можно даже с другим именем импортировать в файл moduleTwo.js
+    // import {
+    //     one as oneRenaimed,
+    //     two
+    // } from './moduleOne.js'
+
+    // console.log(oneRenaimed);
+    // console.log(two)
 
 
 
 
 })
+
