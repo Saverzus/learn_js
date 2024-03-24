@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // 19. Импортирование
-    // Например есть файл moduleOne.js
+    // Например есть файл moduleOne.mjs
     // const one = 1;
     // const two = 'two';
 
@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //     two
     // }
 
-    // // И можно даже с другим именем импортировать в файл moduleTwo.js
+    // // И можно даже с другим именем импортировать в файл moduleTwo.mjs
     // import {
     //     one as oneRenaimed,
     //     two
@@ -241,6 +241,28 @@ document.addEventListener("DOMContentLoaded", function () {
     // console.log(oneRenaimed);
     // console.log(two)
 
+
+    // 20. Классы. Класс и вызвать метод класса
+    function classExample() {
+        class Comment {
+            constructor(text) {
+                this.text = text;
+                this.votesQty = 0;
+            }
+
+            upvote() {
+                this.votesQty += 1;
+            }
+        }
+
+        const firstComment = new Comment('First Comment');
+
+
+        firstComment.upvote();
+        console.log(firstComment.votesQty);
+    }
+
+    classExample()
 
 
 
