@@ -262,7 +262,6 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(firstComment.votesQty);
     }
 
-    classExample()
 
 
 
