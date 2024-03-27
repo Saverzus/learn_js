@@ -262,6 +262,21 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(firstComment.votesQty);
     }
 
+    class Car {
+        constructor(name) {
+            this.name = name;
+            this.quantity = 0;
+        }
+
+        carBuild() {
+            this.quantity += 1;
+        }
+    }
+
+    const newCar = new Car();
+
+    newCar.carBuild();
+    console.log(newCar.quantity);
 
 
 
