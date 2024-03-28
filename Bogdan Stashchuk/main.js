@@ -257,11 +257,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const firstComment = new Comment('First Comment');
 
-
         firstComment.upvote();
         console.log(firstComment.votesQty);
     }
 
+
+    // class NumbersArray extends Array {
+    //     sum() {
+    //         return this.reduce((el, acc) => {
+    //             return acc += el, 0
+    //         })
+    //     }
+    // }
+
+    // const myArray = new NumbersArray(2, 5, 7)
+
+    // console.log(myArray);
+    // myArray.sum();
+
+
+    const users = [
+        { id: '123', name: 'John' },
+        { id: '345', name: 'Anna' },
+        { id: '567', name: 'Kate' },
+        { id: '789', name: 'Jane' }
+    ]
+
+    function groupNameById(result, user) {
+        return {
+            ...result,
+            [user.id]: user.name
+        }
+    }
+
+    console.log(groupNameById(0));
 
 
 })
