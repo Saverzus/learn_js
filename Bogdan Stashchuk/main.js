@@ -344,11 +344,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // 25. Получение данных с помощью FETCH API
-
+    // тут 2 раза then, т.к. fetch возвращает промис и json возвращает промис
     fetch('https://jsonplaceholder.typicode.com/todos')
-        .then(response => response.json())
+        .then(response => {
+            console.log(response)
+            return response.json()
+        })
         .then(json => console.log(json))
-        .catch(error => console.log(error))
+        .catch(error => console.error(error))
 
 
 
