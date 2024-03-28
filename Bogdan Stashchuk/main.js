@@ -309,6 +309,20 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(result)
     }
 
+    // 23. Пройтись циклом по строке и получить нужное значение, убрав ненужные findName('Bogdan');
+    function findName(targetName) {
+        const name = 'asdqwedaBoaasdoadsasdgqweqdasdasazxczxcn123213eqwqwfdatrghhb';
+        let result = '';
+        let target = targetName;
+        for (let char of name) {
+            result = result + char;
+            if (target.toLowerCase().includes(result.toLowerCase())) {
+                result = target;
+                break;
+            }
+        }
+        console.log(result);
+    }
 
 
 
@@ -324,18 +338,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    // class NumbersArray extends Array {
-    //     sum() {
-    //         return this.reduce((el, acc) => {
-    //             return acc += el, 0
-    //         })
-    //     }
-    // }
 
-    // const myArray = new NumbersArray(2, 5, 7)
+    class NumbersArray extends Array {
+        sum() {
+            return this.reduce((el, acc) => {
+                return acc += el, 0
+            })
+        }
+    }
 
-    // console.log(myArray);
-    // myArray.sum();
+    const myArray = new NumbersArray(2, 5, 7)
+
+    console.log(myArray);
+    myArray.sum();
 
 
 
