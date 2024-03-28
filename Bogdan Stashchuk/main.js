@@ -271,6 +271,57 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(sum);
     }
 
+    // 22. выбрать чётные, вычислить их квадраты и отобрать из них числа больше 50. getEvenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])
+    function getEvenNumbers(array) {
+
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] % 2 === 0) {
+                // console.log(`Число четное ${array[i]}`);
+
+                const even = array[i] * array[i];
+
+                if (even >= 50) {
+                    console.log(even);
+                }
+            }
+        }
+    }
+
+    // 22. выбрать чётные, вычислить их квадраты и отобрать из них числа больше 50.
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    function filterEven(num) {
+        return num % 2 === 0
+    }
+
+    function square(num) {
+        return num * num
+    }
+
+    function filterGreaterThanFifty(num) {
+        return num > 50
+    }
+
+    const result = numbers
+        .filter(filterEven)
+        .map(square)
+        .filter(filterGreaterThanFifty)
+
+    console.log(result)
+    // [64, 100]
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     // class NumbersArray extends Array {
@@ -289,13 +340,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    const array = [1, 2, 3, 4, 5, 6, 7];
 
-    const sum = array.reduce((acc, val) => {
-        return acc + val;
-    })
 
-    console.log(sum)
+
 
 
 
