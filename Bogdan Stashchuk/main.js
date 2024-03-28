@@ -261,36 +261,46 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(firstComment.votesQty);
     }
 
+    // 21. метод reduce. Сложение чисел в массиве
+    function sumNumsArray() {
+        const myArray = [10, 2, 12];
 
-    // class NumbersArray extends Array {
-    //     sum() {
-    //         return this.reduce((el, acc) => {
-    //             return acc += el, 0
-    //         })
-    //     }
-    // }
-
-    // const myArray = new NumbersArray(2, 5, 7)
-
-    // console.log(myArray);
-    // myArray.sum();
+        const sum = myArray.reduce((acc, val) => {
+            return acc + val;
+        })
+        console.log(sum);
+    }
 
 
-    const users = [
-        { id: '123', name: 'John' },
-        { id: '345', name: 'Anna' },
-        { id: '567', name: 'Kate' },
-        { id: '789', name: 'Jane' }
-    ]
 
-    function groupNameById(result, user) {
-        return {
-            ...result,
-            [user.id]: user.name
+    class NumbersArray extends Array {
+        sum() {
+            return this.reduce((el, acc) => {
+                return acc += el, 0
+            })
         }
     }
 
-    console.log(groupNameById(0));
+    const myArray = new NumbersArray(2, 5, 7)
+
+    console.log(myArray);
+    myArray.sum();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 })
