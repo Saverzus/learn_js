@@ -273,23 +273,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    class NumbersArray extends Array {
-        sum() {
-            return this.reduce((el, acc) => {
-                return acc += el, 0
-            })
-        }
-    }
+    // class NumbersArray extends Array {
+    //     sum() {
+    //         return this.reduce((el, acc) => {
+    //             return acc += el, 0
+    //         })
+    //     }
+    // }
 
-    const myArray = new NumbersArray(2, 5, 7)
+    // const myArray = new NumbersArray(2, 5, 7)
 
-    console.log(myArray);
-    myArray.sum();
-
-
+    // console.log(myArray);
+    // myArray.sum();
 
 
 
+
+    const array = [1, 2, 3, 4, 5, 6, 7];
+
+    const sum = array.reduce((acc, val) => {
+        return acc + val;
+    })
+
+    console.log(sum)
 
 
 
