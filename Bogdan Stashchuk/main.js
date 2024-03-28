@@ -271,7 +271,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(sum);
     }
 
-    // 22. выбрать чётные, вычислить их квадраты и отобрать из них числа больше 50. getEvenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])
+    // 22. выбрать чётные (Решение 1), вычислить их квадраты и отобрать из них числа больше 50. getEvenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])
     function getEvenNumbers(array) {
 
         for (let i = 0; i < array.length; i++) {
@@ -279,7 +279,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 // console.log(`Число четное ${array[i]}`);
 
                 const even = array[i] * array[i];
-
                 if (even >= 50) {
                     console.log(even);
                 }
@@ -287,28 +286,29 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // 22. выбрать чётные, вычислить их квадраты и отобрать из них числа больше 50.
-    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    // 22. выбрать чётные (Решение 2), вычислить их квадраты и отобрать из них числа больше 50. getEvenNumbers2([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+    function getEvenNumbers2(array) {
 
-    function filterEven(num) {
-        return num % 2 === 0
+        function filterEven(num) {
+            return num % 2 === 0
+        }
+
+        function square(num) {
+            return num * num
+        }
+
+        function filterGreaterThanFifty(num) {
+            return num > 50
+        }
+
+        const result = array
+            .filter(filterEven)
+            .map(square)
+            .filter(filterGreaterThanFifty)
+
+        console.log(result)
     }
 
-    function square(num) {
-        return num * num
-    }
-
-    function filterGreaterThanFifty(num) {
-        return num > 50
-    }
-
-    const result = numbers
-        .filter(filterEven)
-        .map(square)
-        .filter(filterGreaterThanFifty)
-
-    console.log(result)
-    // [64, 100]
 
 
 
