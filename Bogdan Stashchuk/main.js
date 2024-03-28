@@ -324,33 +324,34 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(result);
     }
 
+    // 24. Создание промиса просто пример
+    function promiseExample() {
+        const myPromise = new Promise((resolve, reject) => {
+            // тут выполняются асинхронные действия
+            // Внутри этой функции нужно в результате вызвать одну из функций resolve или reject
+        });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    class NumbersArray extends Array {
-        sum() {
-            return this.reduce((el, acc) => {
-                return acc += el, 0
+        // Получение результата промиса
+        myPromise
+            .then(value => {
+                // Действие в случае успешного исполнения Промиса
+                // Значение value - это значение, переданное в вызове функции resolve внутри Промиса
             })
-        }
+            .catch(error => {
+                // Действия в случае отклонения промиса
+                // Значение error - это значение, переданное в вызове функции reject внутри промиса
+            });
     }
 
-    const myArray = new NumbersArray(2, 5, 7)
+    // 25. Получение данных с помощью FETCH API
 
-    console.log(myArray);
-    myArray.sum();
+    fetch('https://jsonplaceholder.typicode.com/todos')
+        .then(response => response.json())
+        .then(json => console.log(json))
+        .catch(error => console.log(error))
+
+
+
 
 
 
