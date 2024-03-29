@@ -371,8 +371,8 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch(error => console.log(error.message))
     }
 
-    // 27. Пример функции с использованием async и await
-    function asyncAwaytExample() {
+    // 27. Пример функции с использованием async и await №1 https://jsonplaceholder.typicode.com/todos
+    function asyncAwaitExample() {
         const timerPromise = () => {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
@@ -392,15 +392,49 @@ document.addEventListener("DOMContentLoaded", function () {
         asyncFn();
     }
 
-    asyncAwaytExample()
+    // 28. Пример функции с использованием async и await №2 https://jsonplaceholder.typicode.com/todos
+    async function asyncAwaitExampleNew() {
+        const getData = async (url) => {
+            const res = await fetch(url);
+            const json = await res.json();
+            return json;
+        }
+
+        const url = 'https://jsonplaceholder.typicode.com/todos';
+
+        try {
+            const data = await getData(url);
+            console.log(data);
+        } catch (error) {
+            console.log(error, message);
+        }
+    }
+
+    asyncAwaitExampleNew();
 
 
+    // 29. Отправить данные на сервер
+    function fetchExample() {
+        const newPost = {
+            title: 'foo',
+            body: 'bar',
+            userId: 1,
+        }
 
-
-
-
-
-
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST', // Здесь так же могут быть GET, PUT, DELETE
+            body: JSON.stringify(newPost), // Тело запроса в JSON-формате
+            headers: {
+                // Добавляем необходимые заголовки
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data)
+                // {title: "foo", body: "bar", userId: 1, id: 101}
+            })
+    }
 
 
 
