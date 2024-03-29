@@ -345,13 +345,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 25. Получение данных с помощью FETCH API
     // тут 2 раза then, т.к. fetch возвращает промис и json возвращает промис
-    fetch('https://jsonplaceholder.typicode.com/todos')
-        .then(response => {
-            console.log(response)
-            return response.json()
+    function simpleFetch() {
+        fetch('https://jsonplaceholder.typicode.com/todos')
+            .then(response => {
+                console.log(response)
+                return response.json()
+            })
+            .then(json => console.log(json))
+            .catch(error => console.error(error))
+    }
+
+
+    const getData = (url) => {
+        return new Promise((resolve, reject) => {
+            fetch(url)
+                .then(response => response.json())
+                .then(json => resolve(json))
+                .catch(error => reject(error))
         })
-        .then(json => console.log(json))
-        .catch(error => console.error(error))
+    }
+
+    getData('https://jsonplaceholder.typicode.com/todos')
+        .then(data => console.log(data))
+        .catch(error => console.log(error.message))
+
 
 
 
