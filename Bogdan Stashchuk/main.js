@@ -371,8 +371,28 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch(error => console.log(error.message))
     }
 
+    // 27. Пример функции с использованием async и await
+    function asyncAwaytExample() {
+        const timerPromise = () => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve();
+                }, 2000);
+            });
+        }
 
+        const asyncFn = async () => {
+            const startTime = performance.now();
+            console.log('Timer starts');
+            await timerPromise();
+            const endTime = performance.now()
+            console.log('Timer ended', endTime - startTime);
+        }
 
+        asyncFn();
+    }
+
+    asyncAwaytExample()
 
 
 
