@@ -410,9 +410,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    asyncAwaitExampleNew();
-
-
     // 29. Отправить данные на сервер
     function fetchExample() {
         const newPost = {
@@ -435,9 +432,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 // {title: "foo", body: "bar", userId: 1, id: 101}
             })
     }
-
-
-
 
 
 
